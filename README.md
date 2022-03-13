@@ -19,9 +19,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Features
 
 - Bootstrapped ✅
-- See the latest news ❌
+- See the latest news ✅
 - Ability to filter by keywords (see everything endpoint api) ✅
-- If the user clicks on a news item it will navigate to a page displaying the full news article selected. ❌
+- If the user clicks on a news item it will navigate to a page displaying the full news article selected. ❌/✅/?
 - Has tests (Interaction/e2e?) ✅
 
 ## Notes
@@ -34,12 +34,11 @@ It takes too long to make production tier tests for all components for an exerci
 
 ## Regarding styling
 
-For demonstration I put time into the card and its parent component. The rest of the pages are very basic.
+For demonstration I put a cursory amount of time into the card and its parent component. The rest of the pages are very basic.
 
 ## Regarding api location
 
 Location of API is defaulted to localhost:3000 (dev). Ideally should be an env variable, but for purposes of this exercise, is just local.
-
 
 ## Regarding clicking of the cards
 
