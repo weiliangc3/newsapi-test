@@ -9,7 +9,14 @@
     "airbnb-typescript"
   ],
   "rules": {
-    "react/function-component-definition": "off"
+    "react/function-component-definition": "off",
+    "react/require-default-props": [
+      2,
+      {
+        "forbidDefaultForRequired": false,
+        "ignoreFunctionalComponents": true
+      }
+    ]
   },
   "overrides": [
     {

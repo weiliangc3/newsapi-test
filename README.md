@@ -26,4 +26,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Notes
 
-I took some time bootstrapping this because I need to do this at some point for myself anyway. My other project doesn't use next, nor jest.
+I took some time bootstrapping this because I need to do this at some point for myself anyway. My other project doesn't use next, nor jest - so I'm going to fork this repo for myself to use as a springboard.

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter renders correctly 1`] = `
+<div>
+  <div>
+    <span
+      data-testid="count"
+    >
+      0
+    </span>
+    <button
+      type="button"
+    >
+      Increment
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Counter takes a default value 1`] = `
+<div>
+  <div>
+    <span
+      data-testid="count"
+    >
+      10
+    </span>
+    <button
+      type="button"
+    >
+      Increment
+    </button>
+  </div>
+</div>
+`;

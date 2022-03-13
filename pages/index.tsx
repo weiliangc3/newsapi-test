@@ -1,7 +1,7 @@
 import React from 'react';
 import type { GetServerSideProps, NextPage } from 'next';
 import { ThemeProvider } from 'styled-components';
-import Title from '../components/atoms/Title';
+import Title from '../components/atoms/Title/Title';
 import theme from '../components/theme';
 
 const Home: NextPage = () => {
