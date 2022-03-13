@@ -35,3 +35,7 @@ It takes too long to make production tier tests for all components for an exerci
 ## Regarding styling
 
 For demonstration I put time into the card and its parent component. The rest of the pages are very basic.
+
+## Regarding api location
+
+Location of API is defaulted to localhost:3000 (dev). Ideally should be an env variable, but for purposes of this exercise, is just local.
