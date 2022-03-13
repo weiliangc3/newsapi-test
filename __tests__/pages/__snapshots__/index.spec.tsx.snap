@@ -7,7 +7,11 @@ exports[`index page renders correctly 1`] = `
   >
     The Noose
   </h1>
-  Life's a bitch and then you die.
+  <p
+    class="sc-gsDKAQ eLJMeh"
+  >
+    Life's a bitch and then you die.
+  </p>
   <input
     data-testid="search-box"
     type="text"
@@ -18,5 +22,18 @@ exports[`index page renders correctly 1`] = `
   >
     Get yer noose here
   </button>
+  <h2
+    class="sc-dkPtRN hMeJFp"
+  >
+    Top news
+  </h2>
+  <div>
+    <div
+      role="button"
+      tabindex="0"
+    >
+      Mock article name
+    </div>
+  </div>
 </div>
 `;

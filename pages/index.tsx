@@ -18,8 +18,8 @@ const Home: NextPage<Props> = ({ news }: Props) => {
     const encodedSearchTerm = encodeURIComponent(searchTerm);
     router.push(`/news?rope=${encodedSearchTerm}`);
   };
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Enter') {
+  const handleKeyDown = (e: any) => {
+    if (e?.key === 'Enter') {
       handleSubmit();
     }
   };

@@ -39,3 +39,8 @@ For demonstration I put time into the card and its parent component. The rest of
 ## Regarding api location
 
 Location of API is defaulted to localhost:3000 (dev). Ideally should be an env variable, but for purposes of this exercise, is just local.
+
+
+## Regarding clicking of the cards
+
+The api doesn't really provide enough content or a key to justify it being a different page. Instead I've made the cards expandable.

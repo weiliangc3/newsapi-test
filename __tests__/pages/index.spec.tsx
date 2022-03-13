@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Page from '../../pages/index';
+import { NewsMock } from '../../utils/interfaces/mocks/NewsMock';
 
 const mockRouterPush = jest.fn();
 jest.mock('next/router', () => ({
@@ -15,12 +16,12 @@ jest.mock('next/router', () => ({
 
 describe('index page', () => {
   it('renders correctly', () => {
-    const tree = render(<Page />);
+    const tree = render(<Page news={NewsMock} />);
     expect(tree.container).toMatchSnapshot();
   });
 
   it('takes a search term and can be used to search', () => {
-    render(<Page />);
+    render(<Page news={NewsMock} />);
     userEvent.type(screen.getByTestId('search-box'), 'joji');
     userEvent.click(screen.getByText('Get yer noose here'));
     expect(mockRouterPush).toHaveBeenCalledWith('/news?rope=joji');

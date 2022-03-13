@@ -6,13 +6,18 @@ import Title from '../components/atoms/Title/Title';
 import theme from '../components/theme';
 import { News } from '../utils/interfaces/News';
 import ArticleCardList from '../components/organism/ArticleCardList';
+import Tagline from '../components/atoms/Tagline/Tagline';
 
 const Home: NextPage<Props> = ({ news, query }: Props) => {
-  const { articles } = news || {};
+  const { articles, totalResults } = news || {};
 
   return (
     <ThemeProvider theme={theme}>
       <Title>The Noose</Title>
+      <Tagline>
+        Life&apos;s a bitch and then you die.
+      </Tagline>
+
       {query ? (
         <>
           <p>
@@ -20,7 +25,7 @@ const Home: NextPage<Props> = ({ news, query }: Props) => {
             <span>{decodeURI(query)}</span>
           </p>
           <p>
-            <span>{articles.length}</span>
+            <span>{totalResults}</span>
             {' articles found'}
           </p>
           <ArticleCardList articles={articles} />
