@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 import { Article } from '../../utils/interfaces/News';
+import { ArticleCardContainer, AutosizingImage } from './HelperComponents';
 
 const ArticleCard: FunctionComponent<Props> = ({ article }: Props) => {
   const [expanded, setExpanded] = useState(false);
@@ -15,16 +16,16 @@ const ArticleCard: FunctionComponent<Props> = ({ article }: Props) => {
   };
 
   return (
-    <div role="button" onClick={handleClick} tabIndex={0} onKeyDown={handleKeyDown}>
+    <ArticleCardContainer role="button" onClick={handleClick} tabIndex={0} onKeyDown={handleKeyDown}>
       {article.title}
       {expanded && (
         <div>
-          <img src={article.urlToImage} alt={`Article for ${article.title}`} />
-          {article.content}
+          <AutosizingImage src={article.urlToImage} alt={`Article for ${article.title}`} />
+          <div>{article.content}</div>
           <a href={article.url}>See more</a>
         </div>
       )}
-    </div>
+    </ArticleCardContainer>
   );
 };
 

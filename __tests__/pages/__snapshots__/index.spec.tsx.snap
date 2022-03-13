@@ -8,7 +8,7 @@ exports[`index page renders correctly 1`] = `
     The Noose
   </h1>
   <p
-    class="sc-gsDKAQ eLJMeh"
+    class="sc-eCImPb jLPgce"
   >
     Life's a bitch and then you die.
   </p>
@@ -23,17 +23,20 @@ exports[`index page renders correctly 1`] = `
     Get yer noose here
   </button>
   <h2
-    class="sc-dkPtRN hMeJFp"
+    class="sc-jRQBWg cfpiQF"
   >
     Top news
   </h2>
-  <div>
-    <div
+  <ul
+    class="sc-hKwDye hqrJQ"
+  >
+    <li
+      class="sc-gsDKAQ ktXXGz"
       role="button"
       tabindex="0"
     >
       Mock article name
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>
 `;

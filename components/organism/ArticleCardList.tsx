@@ -2,12 +2,13 @@
 import React, { FunctionComponent } from 'react';
 import { Article } from '../../utils/interfaces/News';
 import ArticleCard from '../molecule/ArticleCard';
+import { ArticleCardContainer } from './HelperComponents';
 
 // index used for simplicity, as index position does not change here
 const ArticleCardList: FunctionComponent<Props> = ({ articles }: Props) => (
-  <div>
+  <ArticleCardContainer>
     {articles.map((article, index) => <ArticleCard article={article} key={`article_${index}`} />)}
-  </div>
+  </ArticleCardContainer>
 );
 
 export default ArticleCardList;
