@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,13 +17,15 @@ const theme = {
   },
 };
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
-    <GlobalStyle />
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  </>
-);
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
+}
 
 export default MyApp;
