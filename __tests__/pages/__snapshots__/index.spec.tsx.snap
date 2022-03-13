@@ -7,5 +7,16 @@ exports[`index page renders correctly 1`] = `
   >
     The Noose
   </h1>
+  Life's a bitch and then you die.
+  <input
+    data-testid="search-box"
+    type="text"
+    value=""
+  />
+  <button
+    type="button"
+  >
+    Get yer noose here
+  </button>
 </div>
 `;
