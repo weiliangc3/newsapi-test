@@ -3,16 +3,33 @@ import type { GetServerSideProps, NextPage } from 'next';
 import { ThemeProvider } from 'styled-components';
 import Title from '../components/atoms/Title/Title';
 import theme from '../components/theme';
+import { News } from '../utils/interfaces/News';
+import ArticleCard from '../components/molecule/ArticleCard';
 
-const Home: NextPage = ({ news }) => (
-  <ThemeProvider theme={theme}>
-    <Title>The Noose</Title>
-    then it slaps.
-    {JSON.stringify(news)}
-  </ThemeProvider>
-);
+const Home: NextPage<Props> = ({ news, query }: Props) => {
+  const { articles } = news;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+  return (
+    <ThemeProvider theme={theme}>
+      <Title>The Noose</Title>
+      <p>
+        {'You searched for '}
+        <span>{decodeURI(query)}</span>
+      </p>
+      <p>
+        <span>{articles.length}</span>
+        {' articles found'}
+      </p>
+      {articles.map((article) => <ArticleCard article={article} />)}
+    </ThemeProvider>
+  );
+};
+
+interface Props {
+  news: News,
+  query: string
+}
+
 export const getServerSideProps: GetServerSideProps = async (cxt) => {
   const queryString = cxt.query.rope;
 
@@ -20,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async (cxt) => {
   const news = await fetchResponse.json();
 
   return {
-    props: { news }, // will be passed to the page component as props
+    props: { news, query: queryString },
   };
 };
 

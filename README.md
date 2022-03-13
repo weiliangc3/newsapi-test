@@ -20,10 +20,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - Bootstrapped ✅
 - See the latest news ❌
-- Ability to filter by keywords (see everything endpoint api) ❌
+- Ability to filter by keywords (see everything endpoint api) ✅
 - If the user clicks on a news item it will navigate to a page displaying the full news article selected. ❌
-- Has tests (Interaction/e2e?) ❌
+- Has tests (Interaction/e2e?) ✅
 
 ## Notes
 
 I took some time bootstrapping this because I need to do this at some point for myself anyway. My other project doesn't use next, nor jest - so I'm going to fork this repo for myself to use as a springboard. (See [here](https://github.com/weiliangc3/nextjs-typescript-tooled)).
+
+## Regarding tests
+
+It takes too long to make production tier tests for all components for an exercise like this. For demonstration, I've added basic tests demonstrating routing and just sanity checks for pages at `__test__/pages`, a test for the api at `__test__/api`, and tests for a component under `components/atoms/Counter`. Tooling for cypress e2e testing may want to live in another repo, since the dependent api (in this case, newsapi) may want to trigger the cypress tests as well.
+
+## Regarding styling
+
+For demonstration I put time into the card and its parent component. The rest of the pages are very basic.
