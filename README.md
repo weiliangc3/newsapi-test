@@ -2,6 +2,14 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It uses the news api to achieve a bunch of things.
 
+## Key features
+
+- Nextjs router stuff
+- Nextjs with fetch
+- Nextjs API
+- Nextjs environment variables
+- No tests
+
 ## Getting Started
 
 Create a file `.env.local` with the api key. An example has been provided in `.env.local-example`.
